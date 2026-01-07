@@ -1,93 +1,50 @@
-# cse13s-winter26-starter
+# CSE13S-01 Winter 2026
 
+## Assignment Directories
 
+All work for an assignment must go into that assignment's corresponding folder. During
+grading, only the contents of that folder will be checked, and anything outside of it
+will not be graded. 
 
-## Getting started
+Not all of the assignment directories may be used (e.g. we may not have an assignment 8).
+It's okay to have an empty directory for assignments that haven't been assigned yet. 
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Additional Files
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+There are a couple of extra files that we've provided for you.
 
-## Add your files
+`README.md`: That's the file you're reading now
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+`.gitignore`: This file tells git to ignore certain files, or certain files whose name
+matches a particular pattern. For example, it's telling git to ignore all `.o` files,
+meaning they won't show up when running `git status`, amongst other things. This helps
+to ensure you don't accidentally commit files you shouldn't be committing. We've provided
+some common extensions for git to ignore. If you wish, you can add more as you see fit.
 
-```
-cd existing_repo
-git remote add origin https://git.ucsc.edu/bgoldbla/cse13s-winter26-starter.git
-git branch -M main
-git push -uf origin main
-```
+`.clang-format`: This contains the formatting instructions used by `clang-format` so it 
+knows how to format your code. Do not modify this file, as we require that your code
+adheres to this format specification. 
 
-## Integrate with your tools
+You'll also find a blank README in each of the assignment directories. No need to worry
+about those until you actually start each of those assignments. 
 
-- [ ] [Set up project integrations](https://git.ucsc.edu/bgoldbla/cse13s-winter26-starter/-/settings/integrations)
+## Pipeline
 
-## Collaborate with your team
+Your repository is configured with an autograding system that you can run to check your 
+work, known as the "pipeline". Instructions on how to use it will be provided during the
+quarter. 
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+The pipeline makes use of certain secrets provided through Gitlab, which allows us to run
+tests without revealing them. **DO NOT ATTEMPT TO MODIFY REPOSITORY OR PIPELINE SETTINGS 
+TO GAIN ACCESS TO THESE SECRETS.** Any evidence of intentional tampering with the pipeline
+to reveal these secrets will be treated as a
+[Level 2 academic misconduct violation](https://ue.ucsc.edu/academic-misconduct.html), 
+resulting in a 1--3 term suspension ***for a first offense***. 
 
-## Test and Deploy
+There are multiple safeguards in place to prevent you from doing so, so you don't need
+to worry about "accidentally" stumbling across the pipeline secrets. So long as you
+use the pipeline according to directions, you will be fine. But woe unto you if you try
+*anything* deliberate, which would be a clear and intentional violation of Sections
+102.011, 102.014, 102.015, and 102.05 of the
+[UCSC Policy on Student Conduct and Discipline](https://deanofstudents.ucsc.edu/student-conduct/student-handbook/100.003.pdf).
 
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
