@@ -1,6 +1,5 @@
 /*
  * tvm:  Time Value of Money
- *
  * Assignment 1 of CSE 13S, Winter 2026.
  */
 
